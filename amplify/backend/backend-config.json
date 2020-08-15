@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"datarealtimed0438b83": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
