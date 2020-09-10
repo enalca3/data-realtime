@@ -5,11 +5,32 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listNotes } from './graphql/queries';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
 
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+
+import Button from 'devextreme-react/button';
+import Chart, {
+  ArgumentAxis,
+  Series,
+  Legend
+} from 'devextreme-react/chart';
+
 const initialFormState = { name: '', description: '' }
 
 function App() {
   const [notes, setNotes] = useState([]);
   const [formData, setFormData] = useState(initialFormState);
+
+  const data = [{
+    arg: 1990,
+    val: 5320816667
+}, {
+    arg: 2000,
+    val: 6127700428
+}, {
+    arg: 2010,
+    val: 6916183482
+}];
 
   useEffect(() => {
     fetchNotes();
@@ -53,6 +74,10 @@ function App() {
     fetchNotes();
   }
 
+  function sayHelloWorld() {
+    alert('Hello world!')
+  } 
+
   return (
     <div className="App">
       <h1>My Notes App</h1>
@@ -87,6 +112,12 @@ function App() {
         }
       </div>
       <AmplifySignOut />
+      <Button text="Click me" onClick={sayHelloWorld} />
+      <Chart dataSource={data}>
+                <ArgumentAxis tickInterval={10} />
+                <Series type="bar" />
+                <Legend visible={false} />
+            </Chart>
     </div>
   );
 }
