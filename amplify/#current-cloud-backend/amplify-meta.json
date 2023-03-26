@@ -1,0 +1,81 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-datarealtime-dev-194735-authRole",
+			"UnauthRoleArn": "arn:aws:iam::304953333518:role/amplify-datarealtime-dev-194735-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::304953333518:role/amplify-datarealtime-dev-194735-authRole",
+			"Region": "eu-west-2",
+			"DeploymentBucketName": "amplify-datarealtime-dev-194735-deployment",
+			"UnauthRoleName": "amplify-datarealtime-dev-194735-unauthRole",
+			"StackName": "amplify-datarealtime-dev-194735",
+			"StackId": "arn:aws:cloudformation:eu-west-2:304953333518:stack/amplify-datarealtime-dev-194735/72f328e0-df1f-11ea-b33c-021ebf3a767c",
+			"AmplifyAppId": "dj64ynqjtqdwq"
+		}
+	},
+	"auth": {
+		"datarealtimed0438b83": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-datarealtime-dev-194735-deployment/amplify-cfn-templates/auth/datarealtimed0438b83-cloudformation-template.yml",
+				"logicalId": "authdatarealtimed0438b83"
+			},
+			"lastPushTimeStamp": "2020-08-17T16:47:54.202Z",
+			"output": {
+				"AppClientSecret": "65khebe0nkd16lh6a9eam2ttvs1dukt5bpul93vniu9dq8q8bes",
+				"UserPoolId": "eu-west-2_ZpAH09Qnz",
+				"AppClientIDWeb": "66g18ss9sptjf611vi9f63p0i5",
+				"AppClientID": "142n2c6v7m64820a4mccqkc1h1",
+				"IdentityPoolId": "eu-west-2:da192da4-75c4-4656-a355-11b48e72a390",
+				"IdentityPoolName": "datarealtimed0438b83_identitypool_d0438b83__dev",
+				"UserPoolName": "datarealtimed0438b83_userpool_d0438b83"
+			},
+			"lastPushDirHash": "/bDZluw4p2y3oOTEBl8d66kF/e0="
+		}
+	},
+	"api": {
+		"datarealtime": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"apiKeyExpirationDays": 7,
+							"description": "demo"
+						}
+					},
+					"additionalAuthenticationProviders": []
+				},
+				"GraphQLAPIIdOutput": "3hqdprhq6vfrxlryucnxysgk6a",
+				"GraphQLAPIEndpointOutput": "https://e25oaxhwyvhlhjlifkl4vc2sge.appsync-api.eu-west-2.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-lwkwmd6665djnlrajcvgdcwx44"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-datarealtime-dev-194735-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apidatarealtime"
+			},
+			"lastPushTimeStamp": "2020-08-17T16:47:54.881Z",
+			"lastPushDirHash": "3FgnvIsL/ItSMD0FD25u1r4Ri3w="
+		}
+	},
+	"storage": {
+		"imagestorage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-datarealtime-dev-194735-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storageimagestorage"
+			},
+			"lastPushTimeStamp": "2020-08-17T16:47:54.881Z",
+			"output": {
+				"BucketName": "datarealtime1bee1a5ebba64af881e49b662a09a774194735-dev",
+				"Region": "eu-west-2"
+			},
+			"lastPushDirHash": "pi6vt+gpXd93iTWGheyHjqq3geQ="
+		}
+	}
+}

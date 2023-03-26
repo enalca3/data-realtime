@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "datarealtime",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-datarealtime-dev-194735-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/98703bbe32cb6b34b44e4254402f569b398c9540"
+}
